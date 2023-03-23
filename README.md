@@ -366,10 +366,14 @@ void Radio::completeStateTransition()
 int MyMAC::handleRadioControlMessage(cMessage * msg)
 {
 	RadioControlMessage *radioMsg = check_and_cast <RadioControlMessage*>(msg);
-	if (radioMsg->getRadioControlMessageKind() == DONE_TRANS_TO_RX){
-		TransitionToMainrx();
-	}
-	...
+	int msgKind = radioMsg->getRadioControlMessageKind();
+	
+	switch (msgKind) {
+		...
+		
+		case DONE_TRANS_TO_RX:{
+			TransitionToMainrx();
+			...
 ```
 
 ACKを返送して、Main TransceiverからWake-up Transceiverに切り替わる場合についても、同様のことが言えるでしょう。
