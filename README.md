@@ -329,7 +329,7 @@ idle 1.4, -, -, -, -
 
 
 ### 切り替えのタイミング
-Wake-up Call（WuC）パケットを送信したあと、トランスミッタノードはMain Transceiverでの動作に移行します。
+Wake-up Tranを用いてWake-up Call（WuC）パケットを送信したあと、トランスミッタノードはMain Transceiverでの動作に移行します。
 この動作を、
 ```c++
 toRadioLayer(wucPacket);
