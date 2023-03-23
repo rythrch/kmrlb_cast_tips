@@ -184,7 +184,7 @@ ackPacket->setByteLength(ACK_PKT_SIZE);
 
 ## ロギング
 ログに残したい内容は、適宜、`trace()`に書き出します。
-```
+```c++
 trace() << "CSMA/CA random backoff value: " << rnd << ", in " << CCAtime << " seconds";
 ```
 シミュレーション実施時にログファイルを出力するには、`.ini`ファイル内で
