@@ -209,7 +209,7 @@ MACレイヤプロトコルモジュールインスタンスは各ノードに�
 void MyMAC::finishSpecific()
 {	
 	if (self == 0) {
-		int numNodes = getParentModule()->getParentModule()->getParentModule()->par("numNodes");;
+		int numNodes = getParentModule()->getParentModule()->getParentModule()->par("numNodes");
 		double sumSpentEnergy = 0.0;
 		double sumSpentEnergySquare = 0.0;
 		
